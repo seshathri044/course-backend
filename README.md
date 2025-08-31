@@ -114,5 +114,5 @@ Contributions are welcome! Please follow these steps:
 - Open a Pull Request
 
 ## 📜 License
-This project is licensed under the MIT License – see the LICENSE
+This project is licensed under theApache-2.0 license – see the LICENSE
  file for details.
