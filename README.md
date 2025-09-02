@@ -16,6 +16,17 @@ This backend powers the deployed frontend app:
 
 ---
 
+## 🏗️ System Architecture  
+
+```mermaid
+flowchart TD
+    A["Frontend - Netlify\n(HTML/CSS/JS/Bootstrap)"] -->|REST API Calls| B["Backend - Render\n(Spring Boot, JPA)"]
+    B -->|SQL Queries| C["Database - Railway\n(MySQL)"]
+
+```
+
+---
+
 ## ✨ Features
 
 - 🔎 List all available courses  
