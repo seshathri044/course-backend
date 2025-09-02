@@ -1,118 +1,118 @@
-# course-backend
-A full-stack Course Registration System built with Spring Boot (Backend),MySQL(DataBase) and a lightweight standalone frontend (HTML, CSS, JavaScript).
-### Note
-- The Backend is not deployed Yet so it may rise Error but the UI is completely deployed using Netify
-```bash
-https://course-reg-system.netlify.app
-```
-### The system allows users to:
-- 🔎 View available courses
-- 📝 Register for a course
-- 👨‍🎓 View enrolled students
+# 📚 Course Registration System – Backend
 
-### This project is split into two repositories:
+A **production-ready backend service** for a full-stack Course Registration System, built with **Spring Boot, MySQL, JPA/Hibernate**, and containerized with **Docker**.  
+This backend powers the deployed frontend app:
 
- 🔹 Backend (Spring Boot): course-backend
-```bash
-https://github.com/seshathri044/course-backend
-```
- 🔹 Frontend (Standalone HTML/JS): course-frontend
-```bash
-https://github.com/seshathri044/course-frontend
-```
-## 🚀 Features
+🔗 **Live Frontend**: [Course Registration System](https://course-register-system.netlify.app)
 
-- ✅ REST API for managing courses and student enrollments
-- ✅ Standalone frontend (no build tools, no frameworks required)
-- ✅ Clean & professional UI 
-- ✅ Responsive design (works on desktop & mobile)
-- ✅ Easy integration between frontend ↔ backend ↔ DataBase
-- ✅ Deployed in Netify
-- ✅ MySQL database integration with Hibernate ORM
-- ✅ Service & Repository layer abstraction
-- ✅ Centralized configuration with application.properties
-- ✅ Tested with Postman + verified in MySQL Workbench
+---
 
+## 🚀 Deployment Architecture
+
+- **Backend API (Spring Boot)** → Deployed on [Render](https://render.com)  
+- **Database (MySQL)** → Hosted on [Railway](https://railway.app)  
+- **Frontend (HTML/JS)** → Deployed on [Netlify](https://netlify.com)  
+- **API Testing** → Verified via Postman  
+
+---
+
+## ✨ Features
+
+- 🔎 List all available courses  
+- 📝 Register a student for a course  
+- 👨‍🎓 View enrolled students  
+- ✅ REST API architecture (tested with Postman)  
+- ✅ Persistent storage with **MySQL + JPA/Hibernate**  
+- ✅ Clean **Service & Repository layer** separation  
+- ✅ Configurable environment via `application.properties`  
+- ✅ **Dockerized** backend for easy deployment  
+
+---
 
 ## 🛠️ Tech Stack
-**Backend (course-backend)**
-- Java 17+
-- Spring Boot
-- Spring Data JPA / Hibernate
-- MySQL 
-- Maven
 
-**Frontend (course-frontend)**
-- HTML
-- CSS
-- JavaScript (Fetch API for REST calls)
+- **Language:** Java 17+  
+- **Framework:** Spring Boot  
+- **ORM:** Spring Data JPA / Hibernate  
+- **Database:** MySQL (Railway)  
+- **Build Tool:** Maven  
+- **Deployment:** Render + Docker  
 
-📂 Project Structure
+---
+
+## 📂 Project Structure
 ```bash
-course-backend/        <-- REST API server (Spring Boot)
-course-frontend/       <-- Standalone frontend (HTML/JS)
+course-backend/
+│── src/main/java/com/example/Course/Registration/System
+│ ├── controller/ # REST Controllers
+│ ├── model/ # Entities (Course, CourseRegister)
+│ ├── repository/ # Spring Data Repositories
+│ ├── service/ # Business Logic Layer
+│ └── CourseRegistrationSystemApplication.java
+│
+│── src/main/resources
+│ ├── application.properties # Config (DB, ports, etc.)
+│
+│── Dockerfile
+│── pom.xml
+│── README.md
 ```
 
-
-📸 Screenshots
-**Homepage**
-<img width="1920" height="1080" alt="CR1" src="https://github.com/user-attachments/assets/70d53708-f4ae-4f73-82e0-da4dbdc50282" />
-**Registeration Page**
-<img width="1920" height="1080" alt="CR2" src="https://github.com/user-attachments/assets/76c30e12-fcbc-4520-bef0-e233362c4855" />
-
-**Available Courses**
-
-**Enrolled Students**
+---
 
 ## ⚡ Setup Instructions
-**1️⃣ Clone Both Repositories**
-**Backend**
+
+### 1️⃣ Clone the repository
 ```bash
 git clone https://github.com/seshathri044/course-backend.git
-```
-**Frontend**
-```bash
-git clone https://github.com/seshathri044/course-frontend.git
-```
-**2️⃣ Run the Backend**
 cd course-backend
-mvn spring-boot:run
-Backend will start at:
-👉 http://localhost:8080
-
-## API Endpoints:
-
-- GET /courses → List available courses
-- POST /courses/register → Register a student
-- GET /courses/enrolled → List enrolled students
-
-3️⃣ Run the Frontend
-
-Simply open the frontend files in your browser:
-- cd course-frontend
-- Open index.html in browser
-
-
-### Frontend Pages:
-```bash
-index.html → Homepage
-register.html → Register a course
-availcourses.html → View available courses
-enrolled.html → View enrolled students
 ```
-🔄 Repo Navigation
+### 2️⃣ Configure Database
+```bash
+Update src/main/resources/application.properties with your DB credentials:
+spring.datasource.url=jdbc:mysql://<RAILWAY_DB_HOST>:<PORT>/<DB_NAME>
+spring.datasource.username=<DB_USER>
+spring.datasource.password=<DB_PASS>
+spring.jpa.hibernate.ddl-auto=update
+spring.jpa.show-sql=true
+```
+### 3️⃣ Run with Maven (local dev)
+```bash
+mvn spring-boot:run
+```
+Backend will start at 👉 http://localhost:8080
 
-- Go to Backend Repo 👉 course-backend - https://github.com/seshathri044/course-frontend
+### 4️⃣ Run with Docker
+Build and run containerized backend:
+docker build -t course-backend .
+docker run -p 8080:8080 course-backend
+
+---
+
+## 🔗 API Endpoints
+
+| Method | Endpoint            | Description              |
+|--------|---------------------|--------------------------|
+| GET    | `/courses`          | List all available courses |
+| POST   | `/courses/register` | Register a student       |
+| GET    | `/courses/enrolled` | View enrolled students   |
+
+👉 Full API collection tested in **Postman**.
 
 
-## 🤝 Contributing
-Contributions are welcome! Please follow these steps:
+### 🔄 Repo Navigation
+
+Frontend Repo 👉 [course-frontend](https://github.com/seshathri044/course-frontend)
+
+Backend Repo 👉 [course-backend](https://github.com/seshathri044/course-backend)
+
+###🤝 Contributing
+- Contributions are welcome!
 - Fork the repo
-- Create your feature branch (git checkout -b feature/awesome-feature)
-- Commit your changes (git commit -m 'Add awesome feature')
-- Push to the branch (git push origin feature/awesome-feature)
+- Create your feature branch: git checkout -b feature/awesome-feature
+- Commit your changes: git commit -m 'Add awesome feature'
+- Push the branch: git push origin feature/awesome-feature
 - Open a Pull Request
 
-## 📜 License
-This project is licensed under theApache-2.0 license – see the LICENSE
- file for details.
+### 📜 License
+This project is licensed under the Apache-2.0 License – see the LICENSE file for details.
