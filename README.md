@@ -40,6 +40,16 @@ This backend powers the deployed frontend app:
 
 ---
 
+### 📸 Screenshots 
+**API Testing**
+<img width="1920" height="1080" alt="BE3" src="https://github.com/user-attachments/assets/609c30d5-be5c-4369-b61b-d08836541b8e" />
+**Backend Deployment**
+<img width="1920" height="1080" alt="BE2" src="https://github.com/user-attachments/assets/a6b5c443-a438-450e-81b5-fd4e1eda1378" />
+**MySQL Deployment**
+<img width="1920" height="1080" alt="BE7" src="https://github.com/user-attachments/assets/a51116ae-53e6-4b44-8747-2f81c59cf661" />
+
+---
+
 ## 📂 Project Structure
 ```bash
 course-backend/
@@ -106,7 +116,7 @@ Frontend Repo 👉 [course-frontend](https://github.com/seshathri044/course-fron
 
 Backend Repo 👉 [course-backend](https://github.com/seshathri044/course-backend)
 
-###🤝 Contributing
+### 🤝 Contributing
 - Contributions are welcome!
 - Fork the repo
 - Create your feature branch: git checkout -b feature/awesome-feature
