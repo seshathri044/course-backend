@@ -1,5 +1,8 @@
 # 📚 Course Registration System – Backend
 
+![Java CI with Maven](https://github.com/seshathri044/course-backend/actions/workflows/maven.yml/badge.svg)
+
+
 A **production-ready backend service** for a full-stack Course Registration System, built with **Spring Boot, MySQL, JPA/Hibernate**, and containerized with **Docker**.  
 This backend powers the deployed frontend app:
 
