@@ -2,11 +2,14 @@
 
 ![Java CI with Maven](https://github.com/seshathri044/course-backend/actions/workflows/maven.yml/badge.svg)
 
-
 A **production-ready backend service** for a full-stack Course Registration System, built with **Spring Boot, MySQL, JPA/Hibernate**, and containerized with **Docker**.  
 This backend powers the deployed frontend app:
 
 🔗 **Live Frontend**: [Course Registration System](https://course-register-system.netlify.app)
+
+⚠️ **Note:** This project is deployed on free-tier services (Render/Railway/Netlify).  
+Because of the limitations of free plans (cold starts and restricted storage), the demo may take extra time to load or occasionally show errors.  
+Once the backend services start running, the application works as expected.
 
 ---
 
